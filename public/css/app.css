@@ -1,0 +1,343 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    background-color: #222
+}
+
+.save-template {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 9999;
+    background-color: black;
+}
+
+.show-template {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 9999;
+    background-color: black;
+}
+
+.save, .show {
+    cursor: pointer;
+}
+
+.icon-wrap {
+    position: absolute;
+    right: -8%;
+}
+
+.loader {
+    display: none;
+    position: fixed;
+    background-color: black;
+    opacity: 60%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #DBDBDB;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+h1 {
+    color: white;
+}
+
+.menu-figma {
+    background-color: #363636;
+}
+
+.btn-round {
+    background: #363636;
+    border: 1.5px solid #963EEE;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+.nav-link:hover {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    color: #853DCD;
+    text-decoration: none;
+}
+
+.nav-link {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #C0C0C0;
+    text-decoration: none;
+}
+
+.form-header {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 33px;
+    color: #DBDBDB;
+}
+
+.research.cit.inactive {
+    background: #232323;
+    border: 2px solid #963EEE;
+    box-sizing: border-box;
+    border-radius: 0px 30px 30px 0px;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.research.gist.inactive {
+    background: #232323;
+    border: 2px solid #963EEE;
+    box-sizing: border-box;
+    border-radius: 30px 0px 0px 30px;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.research.cit:hover {
+    background: #963EEE;
+    border-radius: 0px 30px 30px 0px;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.research.gist:hover {
+    background: #963EEE;
+    border-radius: 30px 0px 0px 30px;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.research.cit.active {
+    background: #963EEE;
+    border-radius: 0px 30px 30px 0px;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.research.gist.active {
+    background: #963EEE;
+    border-radius: 30px 0px 0px 30px;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.card-form {
+    border: 1px solid #828282;
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: #DBDBDB;
+}
+
+input {
+    background: #424242 !important;
+    border-color: #424242 !important;
+    border-radius: 5px !important;
+    color: #DBDBDB !important;
+    height: 30px;
+}
+
+textarea {
+    background: #424242 !important;
+    border-color: #424242 !important;
+    border-radius: 5px !important;
+    color: #DBDBDB !important;
+}
+
+.textarea-wrap__outer {
+    position: relative;
+}
+
+.profile__user {
+    position: relative;
+    z-index: 2;
+}
+
+.profile__menu:hover .profile__settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile__settings {
+    display: none;
+    width: 192px;
+    height: 118px;
+    background: #424242;
+    color: #C0C0C0;
+    /*border-radius: 20px 20px 20px 20px;*/
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    top: 50px;
+}
+
+.settings-block {
+    width: 246.47px;
+    height: 94px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile__user-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 145.19%;
+    color: #C0C0C0;
+}
+
+.settings-block__block {
+    width: 170px;
+    height: 94px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.settings-block__item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
+.settings-item__link {
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 145.19%;
+    margin: 0 0 0 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.settings-item__link:hover {
+    color: #8157BD;
+}
+
+.select2-container--default .select2-selection--single {
+    background: #424242 !important;
+    border-color: #424242 !important;
+    border-radius: 5px !important;
+    color: #DBDBDB !important;
+    height: 30px;
+}
+
+.select2-container--default .select2-selection--multiple {
+    background: #424242 !important;
+    border-color: #424242 !important;
+    border-radius: 5px !important;
+    color: #DBDBDB !important;
+    min-height: 30px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    color: #000000;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    color: #DBDBDB !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #DBDBDB !important;
+}
+
+.btn-card {
+    background: #963EEE;
+    border-radius: 30px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.card-table-wrapper {
+    border: 1px solid #828282;
+    border-radius: 30px;
+    color: white;
+}
+
+.card-table {
+    color: white;
+}
+
+.card-table td {
+    padding: 10px;
+    border-bottom: 1px solid #828282;
+}
+
+.card-table th {
+    padding: 10px;
+    border-bottom: 1px solid #828282;
+}
+
+.nav {
+    justify-content: center;
+}
+
